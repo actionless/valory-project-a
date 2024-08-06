@@ -19,6 +19,8 @@
 
 """This module contains the handlers for the skill of DemoAbciApp."""
 
+from aea.protocols.base import Message
+
 from packages.valory.skills.abstract_round_abci.handlers import (
     ABCIRoundHandler as BaseABCIRoundHandler,
 )
@@ -42,10 +44,16 @@ from packages.valory.skills.abstract_round_abci.handlers import (
 )
 
 
-ABCIHandler = BaseABCIRoundHandler
+# ABCIHandler = BaseABCIRoundHandler
 HttpHandler = BaseHttpHandler
 SigningHandler = BaseSigningHandler
 LedgerApiHandler = BaseLedgerApiHandler
 ContractApiHandler = BaseContractApiHandler
 TendermintHandler = BaseTendermintHandler
 IpfsHandler = BaseIpfsHandler
+
+
+class ABCIHandler(BaseABCIRoundHandler):
+    def handle(self, message: Message) -> None:
+        if "hello" in message:
+            print(message)
