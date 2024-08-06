@@ -59,7 +59,6 @@ class ABCIHandler(BaseABCIRoundHandler):
 
     def handle(self, message: Message) -> None:
         """Handler function"""
-        for value in message.decode(b64decode(message.json()["body"])).values():
-            if "hello" in value:
-                print(message)
-                break
+        body = message.json().get("body")
+        if body and ("hello" in b64decode(body).decode("utf-8")):
+            print(message)
