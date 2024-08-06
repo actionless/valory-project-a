@@ -1,9 +1,9 @@
 {
     "dev": {
-        "skill/author/demo_abci/0.1.0": "bafybeidcagaethamwaiityrxrqnpatkibycmlgesn5ntzgwtpmfbmeusku",
-        "skill/author/demo_chained_abci/0.1.0": "bafybeifb5vfy2nwc7xg4fzeksotowzlojj5vezk5ei3ekouleso2crxxze",
-        "agent/author/demo_agent/0.1.0": "bafybeihkx6zfp56jzjxdloix3zllsorfjvs2jhfg3tmvlb5au4cs5bvvya",
-        "service/author/demo_service/0.1.0": "bafybeif62elinxmknnp5hxjc72smech6z34eadxfp6b43vjsy4u62net5q"
+        "skill/author/demo_abci/0.1.0": "bafybeihgwvfds3ecjbqn6jy7u6cvnc7j3h55ggjhpnkkqpxc5g7wl5vd6q",
+        "skill/author/demo_chained_abci/0.1.0": "bafybeiedl2e3e6qttw43or2bazwo33zhgybevwpk6oyykkkqzyxka526hq",
+        "agent/author/demo_agent/0.1.0": "bafybeiatwkf6au4sqaexbjyvfu3zkrazuqzdmfycl6dgurg5ukrop44qzy",
+        "service/author/demo_service/0.1.0": "bafybeiayceruuokxv7sjqiybl3kzwdpwkwy7jxvsub4oooqyll72xpvare"
     },
     "third_party": {
         "protocol/open_aea/signing/1.0.0": "bafybeihv62fim3wl2bayavfcg3u5e5cxu3b7brtu4cn5xoxd6lqwachasi",
