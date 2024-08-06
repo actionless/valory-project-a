@@ -19,6 +19,8 @@
 
 """This module contains the handlers for the skill of DemoAbciApp."""
 
+from base64 import b64decode
+
 from aea.protocols.base import Message
 
 from packages.valory.skills.abstract_round_abci.handlers import (
@@ -54,5 +56,7 @@ IpfsHandler = BaseIpfsHandler
 
 class ABCIHandler(BaseABCIRoundHandler):
     def handle(self, message: Message) -> None:
-        if "hello" in message.json()["body"]:
-            print(message)
+        for value in message.decode(b64decode(message.json()["body"])).values():
+            if "hello" in value:
+                print(message)
+                break
