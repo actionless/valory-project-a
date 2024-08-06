@@ -101,7 +101,7 @@ def test_handler_skipped() -> None:
 def test_behaviour() -> None:
     test_result = None
 
-    def mock_transaction(_self: DemoBehaviour, payload: dict) -> Generator:
+    def mock_transaction(_self: DemoBehaviour, payload: DemoPayload) -> Generator:
         nonlocal test_result
         test_result = payload
         yield
