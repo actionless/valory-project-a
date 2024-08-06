@@ -55,5 +55,5 @@ IpfsHandler = BaseIpfsHandler
 
 class ABCIHandler(BaseABCIRoundHandler):
     def handle(self, message: Message) -> None:
-        if "hello" in message:
+        if "hello" in message.json()["body"]:
             print(message)
