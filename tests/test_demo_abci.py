@@ -90,13 +90,11 @@ def handler_test_common(message: str) -> str:
 
 def test_handler_triggered() -> None:
     test_output = handler_test_common("hello")
-    print(f"{test_output=}")
     assert "Message(sender=None,to=None,dialogue_reference=hello)" in test_output
 
 
 def test_handler_skipped() -> None:
     test_output = handler_test_common("spam")
-    print(f"{test_output=}")
     assert "Message(" not in test_output
 
 
