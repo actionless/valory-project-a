@@ -78,9 +78,9 @@ class TestMessage(Message):
     serializer = TestSerializer
 
 
-def handler_test_common(message: str) -> str:
+def handler_test_common(text: str) -> str:
     message = TestMessage({
-        "dialogue_reference": message,
+        "dialogue_reference": text,
     })
     out_file = StringIO()
     with mock.patch("sys.stdout", new=out_file):
