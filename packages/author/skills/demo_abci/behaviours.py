@@ -71,7 +71,8 @@ class DemoBehaviour(DemoBaseBehaviour):  # pylint: disable=too-many-ancestors
 
         with self.context.benchmark_tool.measure(self.behaviour_id).local():
             sender = self.context.agent_address
-            payload_content = " ".join(random.choice(DICTIONARY) for _ in range(2))
+            # `nosec` because random is used not for cryptography here:
+            payload_content = " ".join(random.choice(DICTIONARY) for _ in range(2))  # nosec B311
             self.context.logger.info(payload_content)
             payload = DemoPayload(sender=sender, content=payload_content)
 
