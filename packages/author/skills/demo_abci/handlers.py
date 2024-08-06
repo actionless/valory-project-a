@@ -55,7 +55,10 @@ IpfsHandler = BaseIpfsHandler
 
 
 class ABCIHandler(BaseABCIRoundHandler):
+    """Handler which checks in message contains `hello`"""
+
     def handle(self, message: Message) -> None:
+        """Handler function"""
         for value in message.decode(b64decode(message.json()["body"])).values():
             if "hello" in value:
                 print(message)
